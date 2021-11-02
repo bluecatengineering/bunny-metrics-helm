@@ -24,9 +24,9 @@ spec:
           ports:
             - containerPort: {{ .Values.deployment.containerPort }}
           volumeMounts:
-            - name: config_volume
+            - name: config-volume
               mountPath: /conf
       volumes:
-        - name: config_volume
+        - name: config-volume
           configMap:
             name: {{ .Values.name }}
