@@ -34,7 +34,9 @@ The following table lists the configurable parameters of the Bunny-metrics chart
 | ------------------------ | ----------------------- | -------------- |
 | `name` |  | `"bunny-metrics"` |
 | `deployment.replicas` |  | `1` |
-| `deployment.image` |  | `"pellicano/bunny-metrics:1.0.0"` |
+| `deployment.imageRegistry` |  | `"ghcr.io/bluecatengineering"` |
+| `deployment.image` |  | `"bunny-metrics:main"` |
+| `deployment.dockerTag` |  | `"latest"` |
 | `deployment.imagePullPolicy` |  | `"Always"` |
 | `deployment.containerPort` |  | `8090` |
 | `deployment.velocityProperties` | An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example:\n `- "directive.if.emptycheck = true"` | `[]` |
