@@ -1,0 +1,7 @@
+{%- extends "markdown.jinja2" -%}
+{%- block header -%}
+{%- endblock -%}
+{%- block title -%}
+{%- endblock -%}
+{%- block description -%}
+{%- endblock -%}
