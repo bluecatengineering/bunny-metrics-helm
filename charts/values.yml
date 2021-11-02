@@ -1,0 +1,16 @@
+name: bunny-metrics
+
+deployment:
+  replicas: 1
+  image: pellicano/bunny-metrics:1.0.0
+  imagePullPolicy: Always
+  containerPort: 8090
+  velocityProperties: ~
+  trinoProperties:
+    host: "localhost"
+    port: 8080
+    authentication:
+      user: "test"
+
+service:
+  port: 8020
