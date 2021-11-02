@@ -2,7 +2,9 @@ name: bunny-metrics
 
 deployment:
   replicas: 1
-  image: pellicano/bunny-metrics:1.0.0
+  imageRegistry: "ghcr.io/bluecatengineering"
+  image: bunny-metrics:main
+  dockerTag: "latest"
   imagePullPolicy: Always
   containerPort: 8090
   velocityProperties: []                     # An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example:\n `- "directive.if.emptycheck = true"`
