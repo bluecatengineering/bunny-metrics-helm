@@ -26,17 +26,19 @@ jobs:
       - name: Make a temp copy of main README file
         uses: actions/checkout@v2
       ## Preparing files
-      - name: Copy README.md
+      - name: Generate and merge Helm Chart specs into README.md
+        run: |
+          frigate gen charts/ >> README.md
+      - name: Copy README.md to temp
         run: |
           cp -f README.md ${{ runner.temp }}/README.md
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-      - name: Merging files
+      - name: Copy README.md to gh-pages
         run: |
           cp -f ${{ runner.temp }}/README.md .
-          frigate gen charts/ >> README.md
       ## Pushing to GH pages
       - name: commit
         run: |
