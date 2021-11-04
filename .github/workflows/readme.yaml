@@ -28,7 +28,7 @@ jobs:
       ## Preparing files
       - name: Generate and merge Helm Chart specs into README.md
         run: |
-          frigate gen charts/ >> README.md
+          frigate gen charts/bunny-metrics/ >> README.md
       - name: Copy README.md to temp
         run: |
           cp -f README.md ${{ runner.temp }}/README.md
