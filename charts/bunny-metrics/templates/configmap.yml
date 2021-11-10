@@ -14,5 +14,11 @@ data:
 
     {{ if .Values.deployment.velocityProperties }}
     velocityProperties: {{ .Values.deployment.velocityProperties }}
-    {{ end }}
-    trino: {{ .Values.deployment.trinoProperties }}
+    {{- end }}
+    trino:
+      host: {{ required "Trino host is mandatory" .Values.deployment.trino.host }}
+      port: {{ required "Trino port is mandatory" .Values.deployment.trino.port }}
+      jdbcProperties:
+      {{- range $index, $value := .Values.deployment.trino.jdbcProperties }}
+        {{ $index }}: {{ $value }}
+      {{- end }}

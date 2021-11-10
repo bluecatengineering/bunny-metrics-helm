@@ -5,12 +5,12 @@ deployment:
   image: ghcr.io/bluecatengineering/bunny-metrics:main
   imagePullPolicy: Always
   containerPort: 8090
-  velocityProperties: []                     # An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example:\n `- "directive.if.emptycheck = true"`
-  trinoProperties:
-    host: "localhost"                        # Host where Trino is located. Since is a sidecar, ideally it should be closest as possible. For more JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference).
+  velocityProperties: []                     # An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example: `- "directive.if.emptycheck = true"`
+  trino:
+    host: "localhost"                        # Host where Trino is located. Since is a sidecar, ideally it should be closest as possible.
     port: 8080                               # Port where Trino service is running.
-    authentication:
-      user: "user"                           # By default, any value is enough here, unless security configuration has changed on Trino side.
+    jdbcProperties:
+      user: "user"                           # By default, any value is enough here, unless security configuration has changed on Trino side. More JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference).
 
 service:
   port: 8090
