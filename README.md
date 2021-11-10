@@ -37,10 +37,10 @@ The following table lists the configurable parameters of the Bunny-metrics chart
 | `deployment.image` |  | `"ghcr.io/bluecatengineering/bunny-metrics:main"` |
 | `deployment.imagePullPolicy` |  | `"Always"` |
 | `deployment.containerPort` |  | `8090` |
-| `deployment.velocityProperties` | An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example:\n `- "directive.if.emptycheck = true"` | `[]` |
-| `deployment.trinoProperties.host` | Host where Trino is located. Since is a sidecar, ideally it should be closest as possible. For more JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference). | `"localhost"` |
-| `deployment.trinoProperties.port` | Port where Trino service is running. | `8080` |
-| `deployment.trinoProperties.authentication.user` | By default, any value is enough here, unless security configuration has changed on Trino side. | `"user"` |
+| `deployment.velocityProperties` | An array of strings containing Apache Velocity [properties](https://velocity.apache.org/engine/2.0/configuration.html). Example: `- "directive.if.emptycheck = true"` | `[]` |
+| `deployment.trino.host` | Host where Trino is located. Since is a sidecar, ideally it should be closest as possible. | `"localhost"` |
+| `deployment.trino.port` | Port where Trino service is running. | `8080` |
+| `deployment.trino.jdbcProperties.user` | By default, any value is enough here, unless security configuration has changed on Trino side. More JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference). | `"user"` |
 | `service.port` |  | `8090` |
 
 
