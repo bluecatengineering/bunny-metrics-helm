@@ -18,7 +18,7 @@ data:
     trino:
       host: {{ required "Trino host is mandatory" .Values.deployment.trino.host }}
       port: {{ required "Trino port is mandatory" .Values.deployment.trino.port }}
-      jdbcProperties:
+      jdbc-properties:
       {{- range $index, $value := .Values.deployment.trino.jdbcProperties }}
         {{ $index }}: {{ $value }}
       {{- end }}
