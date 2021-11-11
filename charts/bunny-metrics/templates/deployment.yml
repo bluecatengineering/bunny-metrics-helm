@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
         - image: {{ .Values.deployment.image }}
-          args: ["-Dmicronaut.config.files=/conf/application.yml"]
+          command: ["java"]
+          args: ["-Dmicronaut.config.files=/conf/application.yml", "-jar" , "/home/app/application.jar"]
           imagePullPolicy: {{ .Values.deployment.imagePullPolicy }}
           name: {{ .Values.name }}
           ports:
