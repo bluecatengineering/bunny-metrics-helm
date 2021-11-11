@@ -24,3 +24,12 @@ Install helm chart:
 ```shell
 helm install my-bunny-metrics bunny-metrics/bunny-metrics --version 0.1.0
 ```
+
+When using [Trino Helm Chart](https://github.com/trinodb/charts), make sure to add JMX connector to make its catalog available.
+
+```yaml
+#...
+additionalCatalogs:
+  jmx: |
+    connector.name=jmx
+```
