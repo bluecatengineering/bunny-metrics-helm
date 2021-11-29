@@ -3,7 +3,7 @@
 This file documents all notable changes to Bunny-Metrics Helm Chart. The release
 numbering uses [semantic versioning](http://semver.org).
 
-## v1.7.15
+## v0.1.7
 
 ### Minor changes
 
