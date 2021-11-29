@@ -26,9 +26,12 @@ jobs:
       - name: Make a temp copy of main README file
         uses: actions/checkout@v2
       ## Preparing files
-      - name: Generate and merge Helm Chart specs into README.md
+      - name: Generate and append Helm Chart specs into README.md
         run: |
           frigate gen charts/bunny-metrics/ >> README.md
+      - name: Append Changelog into README.md
+        run: |
+          cat CHANGELOG.md >> README.md
       - name: Copy README.md to temp
         run: |
           cp -f README.md ${{ runner.temp }}/README.md
