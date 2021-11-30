@@ -1,5 +1,5 @@
 name: bunny-metrics
-
+nameOverride:                                # Override service name with a custom value. If not, the service name will contain Release.Name prepended with either Values.Name or Chart.Name when no duplicating.
 deployment:
   replicas: 1
   image: ghcr.io/bluecatengineering/bunny-metrics:main
@@ -10,7 +10,7 @@ deployment:
     host: "localhost"                        # Host where Trino is located. Since is a sidecar, ideally it should be closest as possible.
     port: 8080                               # Port where Trino service is running.
     jdbcProperties:
-      user: "user"                           # By default, any value is enough here, unless security configuration has changed on Trino side. More JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference).
+      user: "bunny-metrics"                  # By default, any value is enough here, unless security configuration has changed on Trino side. More JDBC parameters [click here](https://trino.io/docs/current/installation/jdbc.html#parameter-reference).
 
 service:
   port: 8090

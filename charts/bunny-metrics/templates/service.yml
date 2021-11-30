@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: {{ .Values.name }}
-  name: {{ .Values.name }}
+  name: {{ template "bunny-metrics.name" . }}
 spec:
   ports:
     - name: {{ .Values.name }}

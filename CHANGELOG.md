@@ -3,6 +3,13 @@
 This file documents all notable changes to Bunny-Metrics Helm Chart. The release
 numbering uses [semantic versioning](http://semver.org).
 
+## v0.1.8
+
+### Minor changes
+
+* Update `deployment.trino.jdbcProperties.user` to "bunny-metrics" in order to differentiate from Trino UI query reports.
+* Add template helper `nameOverride` to override service name and prepend Release.Name to Values.Name/Chart.Name.
+
 ## v0.1.7
 
 ### Minor changes
