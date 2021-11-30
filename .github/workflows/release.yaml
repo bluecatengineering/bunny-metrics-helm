@@ -45,7 +45,7 @@ jobs:
           git config user.name bunny_metrics_ci
           git config user.email "bunny_metrics_ci@users.noreply.github.com"
           git add README.md
-          git commit --signoff -m "Merging README from main with Helm Chart specs"
+          git commit --allow-empty --signoff -m "Merging README from main with Helm Chart specs"
           git push
   release:
     needs: sync-readme
