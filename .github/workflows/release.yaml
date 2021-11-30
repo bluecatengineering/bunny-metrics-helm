@@ -4,10 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'README.md'
-      - 'CHANGELOG.md'
-      - 'charts/**'
 
 jobs:
   sync-readme:
