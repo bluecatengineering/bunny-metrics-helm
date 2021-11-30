@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   bunny-metrics:
   - apiVersion: v2
+    created: "2021-11-30T18:39:07.622691247Z"
+    description: A sidecar to run alongside Trino to gather metrics using the JMX
+      connector and expose them in different formats using Apache Velocity.
+    digest: 7ad8e61eaadcd831aabbf1b73fb89e8daac2d790b76ec35e24a926bc26bced2c
+    name: bunny-metrics
+    type: application
+    urls:
+    - https://github.com/bluecatengineering/bunny-metrics-helm/releases/download/bunny-metrics-0.1.8/bunny-metrics-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     created: "2021-11-30T06:41:36.22273249Z"
     description: A sidecar to run alongside Trino to gather metrics using the JMX
       connector and expose them in different formats using Apache Velocity.
@@ -61,4 +71,4 @@ entries:
     urls:
     - https://github.com/bluecatengineering/bunny-metrics-helm/releases/download/bunny-metrics-0.1.1/bunny-metrics-0.1.1.tgz
     version: 0.1.1
-generated: "2021-11-29T14:39:36.222749591Z"
+generated: "2021-11-30T18:39:07.622783531Z"
