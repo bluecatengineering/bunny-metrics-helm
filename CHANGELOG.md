@@ -3,6 +3,12 @@
 This file documents all notable changes to Bunny-Metrics Helm Chart. The release
 numbering uses [semantic versioning](http://semver.org).
 
+## v0.1.9
+
+### Minor changes
+
+* Fix prefixed namespace on configmap and deployment.
+
 ## v0.1.8
 
 ### Minor changes
