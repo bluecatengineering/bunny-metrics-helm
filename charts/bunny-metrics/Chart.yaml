@@ -2,4 +2,4 @@ apiVersion: v2
 name: bunny-metrics
 description: A sidecar to run alongside Trino to gather metrics using the JMX connector and expose them in different formats using Apache Velocity.
 type: application
-version: 0.1.9
+version: 0.1.10

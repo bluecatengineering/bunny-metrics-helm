@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "bunny-metrics.name" . }}
+  name: {{ template "bunny-metrics.name" . }}-config
   labels:
     app: {{ .Values.name }}
 data:
